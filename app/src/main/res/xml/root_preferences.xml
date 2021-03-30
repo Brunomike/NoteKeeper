@@ -1,0 +1,72 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory app:title="General">
+        <EditTextPreference
+            android:capitalize="words"
+            android:defaultValue="@string/pref_default_display_name"
+            android:inputType="textCapWords"
+            android:key="user_display_name"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_title_display_name"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            android:defaultValue="@string/pref_default_email_address"
+            android:inputType="textEmailAddress"
+            android:key="user_email_address"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_title_email_address"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            android:defaultValue="@string/pref_default_favorite_social"
+            android:entries="@array/pref_entries_favorite_social"
+            android:entryValues="@array/pref_values_favorite_social"
+            android:key="user_favorite_social"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:title="@string/pref_title_favorite_social"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+    <PreferenceCategory app:title="Notifications">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="notifications_new_message"
+            android:title="@string/pref_title_new_message_notifications" />
+
+<!--        <RingtonePreference-->
+<!--            android:defaultValue="content://settings/system/notification_sound"-->
+<!--            android:dependency="notifications_new_message"-->
+<!--            android:key="notifications_new_message_ringtone"-->
+<!--            android:ringtoneType="notification"-->
+<!--            android:title="@string/pref_title_ringtone" />-->
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:dependency="notifications_new_message"
+            android:key="notifications_new_message_vibrate"
+            android:title="@string/pref_title_vibrate" />
+
+    </PreferenceCategory>
+    <PreferenceCategory app:title="Data and sync">
+        <ListPreference
+            android:defaultValue="180"
+            android:entries="@array/pref_sync_frequency_titles"
+            android:entryValues="@array/pref_sync_frequency_values"
+            android:key="sync_frequency"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:title="@string/pref_title_sync_frequency" />
+
+
+        <Preference android:title="@string/pref_title_system_sync_settings">
+            <intent android:action="android.settings.SYNC_SETTINGS" />
+
+        </Preference>
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

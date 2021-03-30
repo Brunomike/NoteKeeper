@@ -7,16 +7,17 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_notes"
-            android:icon="@android:drawable/stat_notify_chat"
+            android:icon="@drawable/ic_baseline_assignment_24"
             android:title="@string/menu_notes" />
         <item
             android:id="@+id/nav_courses"
-            android:icon="@android:drawable/ic_dialog_dialer"
+            android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_courses" />
     </group>
     <item
         android:id="@+id/menu_communicate"
         android:title="@string/menu_communicate" />
+
     <group>
         <item
             android:id="@+id/menu_share"
@@ -26,5 +27,11 @@
             android:id="@+id/menu_send"
             android:icon="@android:drawable/ic_menu_send"
             android:title="@string/menu_send" />
+    </group>
+    <group>
+        <item
+            android:id="@+id/menu_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="Settings" />
     </group>
 </menu>

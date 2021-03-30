@@ -19,7 +19,7 @@ public class NoteRecyclerAdapter extends RecyclerView.Adapter<NoteRecyclerAdapte
 
     public NoteRecyclerAdapter(Context context, List<NoteInfo> notes) {
         mContext = context;
-        //Inoreder to create views from a layout resource
+        //Inorder to create views from a layout resource
         mLayoutInflater = LayoutInflater.from(context);
         mNotes = notes;
     }

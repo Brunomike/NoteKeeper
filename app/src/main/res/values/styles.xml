@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="courseTitle" parent="@android:style/TextAppearance.Material.Medium">
+        <item name="android:textColor">@color/pluralsight_orange</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="addFab" parent="@style/Widget.Design.FloatingActionButton">
+        <item name="srcCompat">@drawable/ic_baseline_add_circle_24</item>
+        <item name="android:tint">@android:color/white</item>
+    </style>
+</resources>
